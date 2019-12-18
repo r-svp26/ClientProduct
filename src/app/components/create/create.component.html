@@ -1,0 +1,10 @@
+
+<p>Create is called</p>
+
+<h2>Production Creations:</h2>
+Id:<input type="number" [(ngModel)]="id"/><br/>
+Name:<input type="text" [(ngModel)]="name"/><br/>
+Description:<input type="text" [(ngModel)]="description"/><br/>
+Price:<input type="number" [(ngModel)]="price"/><br/>
+<button (click)="createProduct({'id':id,'name':name,'description':description,'price':price})">Create Product</button><br>
+<h2>{{createResponse | json}}</h2>
