@@ -14,7 +14,8 @@ export class UpdateComponent implements OnInit {
   ngOnInit() {
   }
 
-  public UpdateProduct(product:any){
+  public updateProducts(product:any){
+    console.log("Method colled out side body ==>",product)
     return this._service.updateProduct(product).subscribe(resp=>{
       this.updateResponse=resp;
     });

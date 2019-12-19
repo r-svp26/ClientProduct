@@ -1,4 +1,4 @@
 <h2> Fetching Product Details:</h2>
 Id:<input type="number" [(ngModel)]="ids"/><br/>
-<button (click)="deleteProduct(ids)">Specific Product</button><br/>
-<h2>{{specificResponse | json}}</h2>
+<button (click)="fetchProducts(ids)">Specific Product</button><br/>
+<h2>{{getProductResponse | json}}</h2>

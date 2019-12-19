@@ -15,11 +15,12 @@ export class FetchComponent implements OnInit {
   ngOnInit() {
   }
   
-//   public fetchProduct(id:number){
-//     return this._service.getProduct(id).subscribe(resp=>{
-//       this.getProductResponse=resp;
+  public fetchProducts(id:number){
+    return this._service.fetchProduct(id).subscribe(resp=>{
+      this.getProductResponse=resp;
+      console.log("data get ==>",this.getProductResponse)
   
-//     })
-//   }
+    })
+  }
 
 }

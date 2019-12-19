@@ -10,6 +10,9 @@ import { CreateComponent } from './components/create/create.component';
 import { UpdateComponent } from './components/update/update.component';
 import { FetchComponent } from './components/fetch/fetch.component';
 import { DeleteComponent } from './components/delete/delete.component';
+import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule, MatButtonModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,18 @@ import { DeleteComponent } from './components/delete/delete.component';
     CreateComponent,
     UpdateComponent,
     FetchComponent,
-    DeleteComponent
+    DeleteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [ProductClientService],
   bootstrap: [AppComponent]

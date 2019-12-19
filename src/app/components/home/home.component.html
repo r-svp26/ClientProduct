@@ -1,0 +1,28 @@
+
+<h2>All Product Details:</h2>
+{{products | json}} <br/>
+
+<h2>Crud Operation links</h2>
+<button mat-raised-button color="primary" (click)="createProductsDialog(create)">Create Product</button><br/>
+<button mat-raised-button color="primary" (click)="createProductsDialog(create)">update Product</button><br/>
+<button mat-raised-button color="primary" (click)="createProductsDialog(create)">Delete Product</button><br/>
+<button mat-raised-button color="primary" (click)="createProductsDialog(create)">fetch Product</button><br/>
+
+
+
+<!-- template start for create -->
+<ng-template #create>
+    <div class="row">
+        <div class="col-sm-12">          
+            <h2>Production Creations:</h2>
+            Id:<input type="number" [(ngModel)]="id"/><br/>
+            Name:<input type="text" [(ngModel)]="name"/><br/>
+            Description:<input type="text" [(ngModel)]="description"/><br/>
+            Price:<input type="number" [(ngModel)]="price"/><br/>
+            <button (click)="createProduct({'id':id,'name':name,'description':description,'price':price})">Create Product</button><br>
+            <!-- <h2>{{createResponse | json}}</h2> -->
+        </div>
+    </div>
+</ng-template>
+
+<!-- template end -->

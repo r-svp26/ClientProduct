@@ -19,12 +19,13 @@ export class ProductClientService {
   }
 
   public updateProduct(product):any{
-    return this._httpClient.put(this.url,product);
+    console.log("Inside service file",this.url,product)
+    return this._httpClient.post(this.url+"/update",product);
   }
 
-  // public fetchProduct(id:number):any{
-  //   return this._httpClient.get(this.url+id);
-  // }
+  public fetchProduct(id:number):any{
+    return this._httpClient.get(this.url+id);
+  }
 
   public deleteProduct(id:number):any{
     return this._httpClient.delete(this.url+id);
